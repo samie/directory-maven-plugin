@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.vaadin</groupId>
     <artifactId>directory-maven-plugin</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
     
     <developers>
@@ -18,11 +18,18 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0</url>
         </license>
     </licenses>
+    
+    	<issueManagement>
+		<url>https://github.com/samie/directory-maven-plugin/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+    
     <scm>
-        <connection>scm:git:https://github.com/samie/directory-maven-plugin.git</connection>
-        <developerConnection>scm:git:ssh://github.com/samie/directory-maven-plugin</developerConnection>
-      <tag>directory-maven-plugin-1.0.2</tag>
-  </scm>
+        <url>https://github.com/samie/directory-maven-plugin</url>
+        <connection>scm:git:git://github.com/samie/directory-maven-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:samie/directory-maven-plugin.git</developerConnection>
+        <tag>directory-maven-plugin-1.0.3</tag>
+    </scm>
     
     
     <properties>
