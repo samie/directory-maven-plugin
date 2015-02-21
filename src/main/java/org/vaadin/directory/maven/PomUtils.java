@@ -185,7 +185,7 @@ public class PomUtils {
                 if (matchScopeRegex.matcher(path).matches()) {
                     pom.mark(1);
                     if (pom.hasMark(0) && pom.hasMark(1)) {
-                        pom.replaceMark(1, "        <dependency><groupId>"
+                        pom.replaceMark(1, "    <dependency><groupId>"
                                 + groupId
                                 + "</groupId><artifactId>"
                                 + artifactId

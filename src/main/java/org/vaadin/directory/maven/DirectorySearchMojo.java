@@ -18,7 +18,7 @@ package org.vaadin.directory.maven;
  * under the License.
  */
 
-import org.vaadin.directory.Addon;
+import org.vaadin.directory.api.Addon;
 import java.util.List;
 import org.apache.maven.model.Model;
 import org.apache.maven.plugin.AbstractMojo;
@@ -27,11 +27,11 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
-import org.vaadin.directory.Directory;
-import org.vaadin.directory.License;
+import org.vaadin.directory.api.Directory;
+import org.vaadin.directory.api.License;
 
 /**
- * Maven plugin API for Vaadin Directory.
+ * Maven plugin for Vaadin Directory.
  *
  * @author Sami Ekblad
  */
@@ -76,10 +76,11 @@ public class DirectorySearchMojo extends AbstractMojo {
                 System.out.println(" (in pom.xml)");
             } else if (add && a.getArtifactId() != null && a.getGroupId() != null) {
                 PomUtils.addDependency(model, a.getGroupId(), a.getArtifactId(), a.getVersion());
-                System.out.println(" (ADDED)");
+                System.out.println(" (added to pom.xml)");
             } else if (a.getArtifactId() != null && a.getGroupId() != null) {
                 System.out.println(" (not present)");
             } else {
+                System.out.println("");
             }
         }
     }
